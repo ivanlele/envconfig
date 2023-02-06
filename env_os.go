@@ -5,7 +5,7 @@ package envconfig
 
 import "os"
 
-func lookupEnv(key string) (string, bool) {
+func LookupEnv(key string) (string, bool) {
 	value, found := os.LookupEnv(key)
 	if found {
 		os.Unsetenv(key)
